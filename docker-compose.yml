@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  octomap_bridge:
+    image: octomap_bridge:latest
+    container_name: octomap_bridge
+    privileged: true
+    network_mode: "host"
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
