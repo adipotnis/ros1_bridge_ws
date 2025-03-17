@@ -1,4 +1,4 @@
-# ROS1 RO2 Bridge with Octomap Map Messages
+# ROS1 RO2 Bridge with Octomap Messages
 A ros1 to ros2 bridge dockerfile setup. Currently supports following custom messages:
 
 1. octomap
