@@ -4,7 +4,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV LANG=en_US.UTF-8
 ENV LC_ALL=en_US.UTF-8
 
-
 RUN apt update && apt install -y \
     software-properties-common \
     curl \
@@ -34,6 +33,10 @@ RUN apt update && apt install -y \
     ros-foxy-tf2 \
     ros-foxy-tf2-ros && \
     rm -rf /var/lib/apt/lists/*
+
+RUN apt update && apt install -y \
+    ros-noetic-tf2-msgs \
+    ros-foxy-tf2-msgs
 
 RUN rm -f /etc/ros/rosdep/sources.list.d/20-default.list && \
     rosdep init && \
