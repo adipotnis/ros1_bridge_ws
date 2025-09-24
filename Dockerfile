@@ -24,11 +24,15 @@ RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | a
     echo "deb http://packages.ros.org/ros/ubuntu focal main" > /etc/apt/sources.list.d/ros1.list && \
     apt update && apt install -y \
         ros-noetic-ros-base \
-        ros-noetic-octomap-msgs && \
+        ros-noetic-octomap-msgs \
+        ros-noetic-tf \
+        ros-noetic-tf2-ros && \
     rm -rf /var/lib/apt/lists/*
 
 RUN apt update && apt install -y \
-    ros-foxy-octomap-msgs && \
+    ros-foxy-octomap-msgs \
+    ros-foxy-tf2 \
+    ros-foxy-tf2-ros && \
     rm -rf /var/lib/apt/lists/*
 
 RUN rm -f /etc/ros/rosdep/sources.list.d/20-default.list && \
